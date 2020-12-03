@@ -22,3 +22,7 @@ This is a summary of the behavior of the rover that we'll implement:
       * When it receives a ``l``, it turns left changing its direction (by one step in the direction).
       * When it receives a ``r``, it turns right changing its direction (by one step in the direction).
    
+### Constraints
+
+TDD is mandatory  :-)
+   
