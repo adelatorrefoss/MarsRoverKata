@@ -7,11 +7,22 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class RoverTest {
     @Test
-    public void when_n_receives_r_then_e() {
+    public void given_n_when_receives_r_then_e() {
         MarsRover rover = new MarsRover();
         rover.run("r");
-        assertThat(rover.direction(), is("E"));
+        assertThat(rover.getDirection(), is("E"));
     }
+
+    @Test
+    public void given_s_when_receives_r_then_w() {
+        MarsRover rover = new MarsRover("S");
+
+
+        rover.run("r");
+        assertThat(rover.getDirection(), is("W"));
+    }
+
+
 }
 
 
@@ -20,6 +31,7 @@ public class RoverTest {
 // Given face "S", when receives "r",
 // Given face "E"
 // Given face "W"
+
 // Given face "N", when receives "l",  then "W"
 // Given face "S", when receives "l",
 // Given face "E"
