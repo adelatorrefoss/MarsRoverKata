@@ -1,18 +1,22 @@
+package MarsRover;
+
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class RoverTest {
-
     @Test
-    public void clase1() {
-        assertThat(true, is(true));
+    public void when_n_receives_r_then_e() {
+        MarsRover rover = new MarsRover();
+        rover.run("r");
+        assertThat(rover.direction(), is("E"));
     }
 }
 
 
 // Given face "N", when receives "r",  then "E"
+
 // Given face "S", when receives "r",
 // Given face "E"
 // Given face "W"
