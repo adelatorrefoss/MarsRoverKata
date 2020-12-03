@@ -16,19 +16,29 @@ public class RoverTest {
     @Test
     public void given_s_when_receives_r_then_w() {
         MarsRover rover = new MarsRover("S");
-
-
         rover.run("r");
         assertThat(rover.getDirection(), is("W"));
     }
+
+    @Test
+    public void given_e_when_receives_r_then_s() {
+        MarsRover rover = new MarsRover("E");
+        rover.run("r");
+        assertThat(rover.getDirection(), is("S"));
+    }
+
+    @Test
+    public void given_w_when_receives_r_then_n() {
+        MarsRover rover = new MarsRover("W");
+        rover.run("r");
+        assertThat(rover.getDirection(), is("N"));
+    }
+
 
 
 }
 
 
-// Given face "N", when receives "r",  then "E"
-
-// Given face "S", when receives "r",
 // Given face "E"
 // Given face "W"
 

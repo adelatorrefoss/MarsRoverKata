@@ -15,6 +15,10 @@ public class MarsRover {
     public void run(String command) {
         if (direction == "S") {
             direction = "W";
+        } else if (direction == "W") {
+            direction = "N";
+        } else if (direction == "E") {
+            direction = "S";
         } else {
             direction = "E";
         }
